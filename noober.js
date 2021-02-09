@@ -78,12 +78,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let json = await response.json()
     let newArray = []
     for (let i = 0; i < json.length; i++) {
-      let all = levelOfService(json[i])
-      if (all == "Noober Pool" | "Noober Purple" | "Noober XL" | "Noober X"){
+
         newArray.push(json[i])
       }
-    } 
-    allRidesButton.insertAdjacentElement(`beforeend`, renderRides(ride))
+    
+    renderRides(newArray)
 
 
   })
